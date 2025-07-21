@@ -1,0 +1,11 @@
+project:
+    name: ml-ops-project-3
+
+deployments:
+    - name: dev
+      executor: celery
+      image:
+        name: quay.io/astronomer/astro-runtime:7.3.0
+      env: dev
+      volumns:
+        - ./include:/usr/local/airflow/include
